@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+
+	<input type="text" id="nombre" placeholder="Nombre" maxlength="20"><br>
+	<input type="number" id="nivel" placeholder="Nivel" maxlength="2"><br>
+	<button id="publicar">Publicar</button>
+	
+
+<script>
+
+$(document).ready(function() {
+
+	$('#publicar').click(function(event) {
+		var sNom = $('#nombre').val();
+		var iNivel = $('#nivel').val();
+
+		$.post('nuevoRecord.php', {
+			'nombre': sNom,
+			'nivel': iNivel
+		}, function(respuesta) {
+    		//Respuesta 0: Todo ha ido bien
+    		//Respuesta 1: Ha ocurrido un error
+    		if(respuesta == 0) {
+    			$('#publicar').html('Publicado!');
+    		} else {
+    			$('#publicar').html('Volver a intentar');
+    		}
+    	});
+	});
+
+});
+</script>	
+</body>
+</html>

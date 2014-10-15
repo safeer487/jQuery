@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+
+	
+
+<script>
+/**
+-----------------------Conceptos básicos: 
+
+GET o POST
+GET - Obtener datos (no destructivas)
+POST - Cambiando la información del servidor (destructivas)
+
+-----------------------Tipos de datos que vamos a recoger:
+
+text
+Para el transporte de cadenas de caracteres simples.
+
+html
+Para el transporte de bloques de código HTML que serán ubicados en la página.
+
+script
+Para añadir un nuevo script con código JavaScript a la página.
+
+json
+Para transportar información en formato JSON, el cual puede incluir cadenas de caracteres, vectores y objetos. Muy recomendable ya que puede contener internamente texto plano, html y scripts.
+
+jsonp
+Para transportar información JSON de un dominio a otro.
+
+xml
+Para transportar información en formato XML.
+
+-----------------------Métodos JQuery:
+
+$.get
+Realiza una petición GET a una URL provista.
+
+$.post
+Realiza una petición POST a una URL provista.
+
+$.getScript
+Añade un script a la página.
+
+$.getJSON
+Realiza una petición GET a una URL provista y espera que un dato JSON sea devuelto.
+
+Todos heredan del padre común $.ajax , el cual contiene muchas opciones de configuración. Para simplificar las llamadas utilizaremos los métodos anteriores que contienen una configuración pre-establecida.
+
+ */
+
+$(document).ready(iniciar());
+
+function iniciar() {
+    // obtiene texto plano o html por medio de get
+    // Estamos mandando el user id 1234
+    // respuesta -> echo 
+    $.get('/users.php', { userId : 1234 }, function(respuesta) {
+        console.log(respuesta);
+    });
+
+    // obtiene texto plano o html por medio de post
+    $.post('/ruta.php', comentario: 'Lorem ipsum', function(respuesta) {
+    	console.log(respuesta);
+    });
+    
+    // añade un script a la página y luego ejecuta la función especificada
+    $.getScript('/bibliotecas/js/misScripts.js', function() {
+        functionDeMisScripts();
+        pepe();
+    });
+    
+    // obtiene información en formato JSON desde el servidor
+    $.getJSON('/articulos.php', function(resp) {
+        $.each(resp, function(k, v) {
+            console.log(k + ' : ' + v);
+        });
+    });
+}
+</script>	
+</body>
+</html>

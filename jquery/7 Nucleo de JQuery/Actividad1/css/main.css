@@ -1,0 +1,15 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.btn {
+	margin-top: 50px;
+	width: 200px;
+	height: 80px;
+}
+
+.mostrar {
+	font-size: 4em;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+
+	<button id="botonPrincipal">duende</button>
+
+<script>
+/**
+ * Ejemplo de Controlador
+ */
+
+$(document).ready(iniciar());
+
+function iniciar() {
+    	
+	var miControlador = function(e) {
+        if(e) {
+			console.log('Ejecutamos modelo Duende');
+			var $this = $(this);
+			//Aqui elegimos nuestro modelo
+			switch($this.val) {
+				case 'duende':
+					console.log('Ejecutamos modelo Duende');
+				break;
+			}
+		} else {
+			console.log('ERROR: se ha llamado al Controlador sin evento.');
+		}
+    };
+    
+    
+    $('#botonPrincipal').click(miControlador);
+}
+</script>	
+</body>
+</html>

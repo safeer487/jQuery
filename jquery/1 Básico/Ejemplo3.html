@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	<div id="miId">Lorem ipsum dolor sit amet.</div>
+
+
+<script>
+    $(document).ready(iniciar());
+
+    function iniciar() {
+    	//Comprobar si existe
+    	if($('#miId').length) {
+    		console.log($('#miId').html());
+    	}
+
+    	if($('#miCuatro').length) {
+            //como isset ,es un count y un isset
+    		console.log('existe');
+    	} else {
+    		console.log('No esta');
+    	}
+    }
+</script>	
+</body>
+</html>

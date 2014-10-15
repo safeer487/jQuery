@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<style>
+	#central {
+		width: 200px;
+		height: 200px;
+		background-color: #E268D8;
+	}
+	#secundario {
+		width: 200px;
+		height: 200px;
+	}
+	.borde {
+		border: 20px solid black;
+	}
+	.amarillo {
+		background-color: #F2FA3C;
+	}
+	.verde {
+		background-color: #57D716;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="central"></div>
+
+	<div id="secundario" class="amarillo"></div>
+
+<script>
+/**
+ * Ejemplo de Hover
+ */
+
+$(document).ready(iniciar());
+
+function iniciar() {
+    	
+    //Hover simple
+	$('#central').hover(function() {
+		console.log('Estoy encima');
+		$(this).toggleClass('borde');
+	});
+
+	//Hover compuesto
+	$('#secundario').hover(function() {
+		//Cuando entra
+		$(this).removeClass('amarillo');//Para cojer los elementos propios usamos this
+		$(this).addClass('verde');
+	}, function() {
+		//Cuando sale
+		$(this).removeClass('verde');
+		$(this).addClass('amarillo');
+		
+	});
+
+}
+</script>	
+</body>
+</html>

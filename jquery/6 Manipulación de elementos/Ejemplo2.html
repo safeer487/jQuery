@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	
+    <div>
+        <h2>Mensajes</h2>
+        <div class="inner">Como vas?</div>
+        <div class="inner">Todo bien?</div>
+    </div>
+    <hr>
+    <div>
+        <p><span class="dialogo">Lorem.</span></p>
+        <p><span class="dialogo">Magnam!</span></p>
+        <p><span class="dialogo">Nihil?</span></p>
+        <p><span class="dialogo">Perspiciatis.</span></p>
+        <p><span class="dialogo">Minima.</span></p>
+        <p><span class="dialogo">Quisquam.</span></p>
+    </div>
+    <hr>
+    <div id="parte3">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Eaque voluptatum officia nesciunt illum.</p>
+        <p>Vero molestiae natus quod veritatis.</p>
+        <p>Deserunt amet beatae vitae eaque.</p>
+        <p>Dolores, aperiam quisquam iste hic.</p>
+        <p>Ducimus debitis impedit accusantium architecto.</p>
+        <p>Non exercitationem dignissimos in voluptate.</p>
+    </div>
+    <hr>
+    <div id="parte4">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Eaque voluptatum officia nesciunt illum.</p>
+        <p>Vero molestiae natus quod veritatis.</p>
+        <p>Deserunt amet beatae vitae eaque.</p>
+        <p>Dolores, aperiam quisquam iste hic.</p>
+        <p>Ducimus debitis impedit accusantium architecto.</p>
+        <p>Non exercitationem dignissimos in voluptate.</p>
+    </div>
+<script>
+    $(document).ready(iniciar());
+
+/*
+     after
+        Inserta después de la etiqueta
+
+     before
+        Inserta antes de la etiqueta
+
+     append
+        Inserta después del contenido dentro de la etiqueta
+
+     prepend
+        Inserta antes del contenido dentro de la etiqueta
+*/
+
+    function iniciar() {
+        $('.inner').after('<p><em>Enviado</em></p>');
+        $('.dialogo').before('--> ');
+        $('#parte3 p').append('<a href="#">Leer más</a>');
+        $('#parte4 p').prepend('<strong>Resumen:</strong> ');
+    }
+
+</script>	
+</body>
+</html>

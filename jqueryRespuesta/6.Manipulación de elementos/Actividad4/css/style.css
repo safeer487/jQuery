@@ -1,0 +1,82 @@
+#wrapper{
+	text-align: center;
+}
+textarea{
+	border-radius: 5px;
+	padding: 5px;
+}
+hr{
+	width:600px;
+}
+li{
+	text-align: center;
+	list-style: none;
+	display:inline;
+	margin-right:100px;
+}
+
+button{
+	color:white;
+	padding:10px;
+	font-style:italic;
+	font-weight: bold;
+	border-style: none;
+	border:3px ridge white;
+	border-radius:4px;
+}
+button:hover{
+	font-size:20px;
+}
+
+button#normal{
+	background-color:green;
+}
+
+button#importante{
+	background: orange;
+}
+button#urgente{
+	background: red;
+}
+#resultados{
+	
+}
+
+#normalB{
+	background-color: green;
+	color:white;
+}
+#importanteB{
+	background-color:orange;
+	color:white;
+}
+#urgenteB{
+	background-color: red;
+	color:white;
+}
+
+.normal{
+	background-color: green;
+	width:768px;
+	color:white;
+	padding: 5px;
+	margin-bottom: 2px;
+	margin-left: 230px;
+}
+.importante{
+	background-color: orange;
+	width:768px;
+	color:white;
+	padding: 5px;
+	margin-bottom: 2px;
+	margin-left: 230px;
+}
+.urgente{
+	background-color: red;
+	width: 768px;
+	color:white;
+	padding: 5px;
+	margin-bottom: 2px;
+	margin-left: 230px;
+
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+
+	<a href="http://google.es" id="capturo">Te capturo</a>
+
+<script>
+
+	/**
+	pageX, pageY
+	La posición del puntero del ratón en el momento que el evento ocurrió, relativo a las zonas superiores e izquierda de la página.
+
+	type
+	El tipo de evento (por ejemplo “click”).
+
+	which
+	El botón o tecla presionada.
+
+	data
+	Alguna información pasada cuando el evento es ejecutado.
+
+	target
+	El elemento DOM que inicializó el evento.
+
+	preventDefault()
+	Cancela la acción predeterminada del evento (por ejemplo: seguir un enlace).
+
+	stopPropagation()
+	Detiene la propagación del evento sobre otros elementos.
+	 */
+    
+    $('#capturo').click(function(e) {
+    	var $this = $(this);
+        e.preventDefault();
+        
+        $('body').append('<hr />');
+        $('body').append('<p>Posición X: ' + e.pageX + '</p>');
+        $('body').append('<p>Posición Y: ' + e.pageY + '</p>');
+        $('body').append('<p>Tipo: ' + e.type + '</p>');//con pantalla ,con tactil etc
+        $('body').append('<p>Tecla: ' + e.which + '</p>');
+        $('body').append('<p>Información: ' + e.data + '</p>');
+        $('body').append('<p>Destino: ' + e.target + '</p>');
+    });
+
+    
+</script>	
+</body>
+</html>

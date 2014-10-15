@@ -1,0 +1,20 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#tanque {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+    width: 430px;
+    height: 430px;
+    background-image: url('../img/tanque.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    -webkit-transform: rotate(0deg);
+}

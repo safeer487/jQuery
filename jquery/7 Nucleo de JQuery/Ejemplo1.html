@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	
+<script>
+    $(document).ready(iniciar());
+
+    function iniciar() {
+        /*
+        $.trim
+        Quita los espacios en blanco del principio y final.
+         */
+        $.trim('    varios espacios en blanco   ');
+        //Devuelve 'varios espacios en blanco'
+        
+
+        /*
+        $.inArray
+        Devuelve el índice de un valor en un vector, o -1 si el valor no se encuentra en el vector.
+         */
+        var aDiasSemana = new Array();
+        aDiasSemana.push('Lunes');
+        aDiasSemana.push('Martes');
+        aDiasSemana.push('Miércoles');
+        aDiasSemana.push('Jueves');
+        aDiasSemana.push('Viernes');
+        aDiasSemana.push('Sábado');
+        aDiasSemana.push('Domingo');
+    
+        if($.inArray('Viernes', aDiasSemana) != -1) {
+            console.log('Existe');
+        }
+
+        /*var sBus = 'Viernes';
+        var iIndice = $.inArray(sBus, aDiasSemana);
+        if(iIndice != -1) {
+            console.log('Existe ' + aDiasSemana[iIndice]);
+        }*/
+
+        /*
+        $.extend
+        Cambia la propiedades del primer objeto utilizando las propiedades de los subsecuentes objetos.
+         */
+        var miCoche = { ruedas : 0, velocidadMax : 220 };
+        var miVehiculo = { ruedas : 4 };
+        
+        var miNuevoCoche = $.extend(miCoche, miVehiculo);
+        console.log(miCoche.ruedas); // '4'
+        console.log(miNuevoCoche.ruedas);   // '4'
+
+        //Evitar el problema anterior
+        var miCoche = { ruedas : 0, velocidadMax : 220 };
+        var miVehiculo = { ruedas : 4 };
+        
+        var miNuevoCoche = $.extend({}, miCoche, miVehiculo);
+        console.log(miCoche.ruedas); // '0'
+        console.log(miNuevoCoche.ruedas);   // '4'
+    }
+</script>	
+</body>
+</html>

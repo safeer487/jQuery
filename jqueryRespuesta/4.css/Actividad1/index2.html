@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<style>
+	.rojo {
+		color: red;
+	}
+	.verde {
+		color: green;
+	}	
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#" id="enlace1" onclick="cambiarColor(1)" class="verde">Lorem ipsum.</a></li>
+		<li><a href="#" id="enlace2" onclick="cambiarColor(2)" class="verde">Lorem ipsum.</a></li>
+		<li><a href="#" id="enlace3" onclick="cambiarColor(3)" class="verde">Lorem ipsum.</a></li>
+		<li><a href="#" id="enlace4" onclick="cambiarColor(4)" class="verde">Lorem ipsum.</a></li>
+	</ul>
+
+	<script type="text/javascript">
+
+	// function cambiarColor(numero){
+	// 	$('#enlace' + numero).addClass('rojo');
+	// }
+		function cambiarColor(numero){
+			var $enlace = $('#enlace' + numero);
+			if ($enlace.hasClass('verde')) {
+				$enlace.removeClass('verde');
+				$enlace.addClass('rojo');
+			}else{
+				$enlace.removeClass('rojo');
+				$enlace.addClass('verde');
+
+			}
+		}
+
+
+	</script>
+</body>
+</html> 

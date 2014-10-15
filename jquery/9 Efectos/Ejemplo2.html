@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<style>
+	#cuadrado1 {
+		position: absolute;
+		top: 200px;
+		left: 0;
+		background-color: yellow;
+		width: 200px;
+		height: 200px;
+	}
+
+	#cuadrado2 {
+		position: absolute;
+		top: 500px;
+		left: 0;
+		background-color: red;
+		width: 200px;
+		height: 200px;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="cuadrado1"></div>
+	<div id="cuadrado2"></div>
+
+<script>
+
+$(document).ready(iniciar());
+
+function iniciar() {
+    	
+    //Animación básica
+	$('#cuadrado1').click(function() {
+		$('#cuadrado1').animate(
+        {
+            left : '500px',
+            height: '500px'
+        });
+	});
+
+	$('#cuadrado2').click(function() {
+		$('#cuadrado2').animate(
+	        {
+	            left : [ "500px", "swing" ],
+	            height : [ '500px', "swing" ]
+	        });
+    });
+
+}
+</script>	
+</body>
+</html>

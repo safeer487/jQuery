@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+
+	<p id="parrafo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, magnam hic perferendis excepturi expedita! Nostrum, tempore, nesciunt, hic, laudantium libero iste enim fugit ea eum alias quasi minus iure in.</p>
+
+	<p id="parrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, magnam repudiandae numquam sapiente beatae voluptas dicta eaque voluptatibus! Quasi, aliquid minima esse ut explicabo qui nam fugiat sed aperiam tenetur!</p>
+
+	<p id="parrafo3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, magnam repudiandae numquam sapiente beatae voluptas dicta eaque voluptatibus! Quasi, aliquid minima esse ut explicabo qui nam fugiat sed aperiam tenetur!</p>
+
+<script>
+/**
+show
+Muestra el elemento seleccionado.
+
+hide
+Oculta el elemento seleccionado.
+
+fadeIn
+De forma animada, cambia la opacidad del elemento seleccionado al 100%.
+
+fadeOut
+De forma animada, cambia la opacidad del elemento seleccionado al 0
+
+slideDown
+Muestra el elemento seleccionado con un movimiento de deslizamiento vertical.
+
+slideUp
+Oculta el elemento seleccionado con un movimiento de deslizamiento vertical.
+
+slideToggle
+Muestra o oculta el elemento seleccionado con un movimiento de deslizamiento vertical, dependiendo si actualmente el elemento está visible o no.
+ */
+
+$(document).ready(iniciar());
+
+function iniciar() {
+    	
+    //Básica
+	$('#parrafo1').click(function() {
+		$('#parrafo1').fadeOut();
+	});
+
+	//Indicar el tiempo
+	$('#parrafo2').click(function() {
+		//Desvanecimiento en 300ms
+		$('#parrafo2').slideToggle(300);
+
+		//slow: 600
+        //fast: 200
+        //default: 400
+    	//$('#parrafo1').slideToggle('slow'); 
+	});
+
+	//Ejecutar código cuando se termine la animación
+	$('#parrafo3').click(function() {
+		$('#parrafo3').slideUp(2000, function() { 
+			//Aqui pondrás tu código para cuando termine
+			//la animación
+			$(this).fadeIn(2000); 
+		});
+	});
+}
+</script>	
+</body>
+</html>

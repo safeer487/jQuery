@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="jquery-2.1.1.min.js"></script>
+	<title>actividad3</title>
+	<link rel="stylesheet" href="">
+	<style>
+		.estilo{width: 200px;
+		        height: 200px;
+		        margin-top:300px;
+		        margin-left:500px;
+		        background-color: pink;
+		        }
+
+		        body {
+		        	position: absolute;
+		        	top: 0;
+		        	left: 0;
+		        	right: 0;
+		        	bottom: 0;
+		        }
+	</style>
+</head>
+<body id="body">
+
+	<div class="estilo" id="div"></div>
+
+
+	<script>
+         
+         var $body = $('#body');
+	     var $div = $('#div');
+
+			$body.on('click', function(e) { 
+				$div.css('width', '+=20px')
+				$div.css('height', '+=20px')
+				console.log('holaaa')
+            });
+
+
+
+	</script>
+	
+</body>
+</html>

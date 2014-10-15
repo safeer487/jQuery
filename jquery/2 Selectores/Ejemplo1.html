@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="foo">
+        <p>Soy un parrafo</p>   
+    </div>
+    <div class="foo2">
+        No tengo esa clase
+    </div>
+    <div class="foo">
+        <span></span>
+    </div>
+    <div class="foo">
+        <span></span>
+    </div>
+    <div class="foo">
+        <span></span>
+    </div>
+
+    <ul>
+        <li>Lorem.</li>
+        <li>Placeat.</li>
+        <li class="current">Enim?</li>
+        <li>Consectetur?</li>
+        <li>Quas.</li>
+    </ul>
+
+
+<script>
+    $(document).ready(iniciar());
+
+    function iniciar() {
+    	
+        // el elemento div.foo contiene elementos <p>
+        var $miDiv1 = $('div.foo').has('p');    //tenga parafos
+        //console.log($miDiv1.html());
+
+        // el elemento h1 no posse la clase 'foo'
+        var $miDiv2 = $('div').not('.foo');  //no tenga parafos
+        //console.log($miDiv2.html());
+
+        // un item de una lista desordenada
+        // que posse la clase 'current'
+        var $miLi = $('ul li').filter('.current');  //parecido a has
+        //console.log($miLi.html());
+
+        // el primer item de una lista desordenada
+        var $miLi2 = $('ul li').first();    //coge primer lista
+        //console.log($miLi2.html());
+
+        // el sexto item de una lista desordenada
+        var $miLi3 = $('ul li').eq(4);
+        console.log($miLi3.html());           
+    }
+</script>	
+</body>
+</html>

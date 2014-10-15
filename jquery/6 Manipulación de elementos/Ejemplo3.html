@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	
+    <div id="buzon">
+        <h2>Mensajes recibidos</h2>
+        <div id="mensaje">Como vas?</div>
+    </div>
+    <input type="button" onclick="leido()" value="leido">
+    <div id="almacen">
+        <h2>Mensajes antiguos</h2>
+    </div>
+    <div id="historial">
+        <h2>Historial</h2>
+    </div>
+    <input type="button" onclick="vaciar()" value="vaciar">
+<script>
+/*
+    appendTo / append
+    Te permite mover un elemento
+
+    appendTo + clone
+    Te permite copiar un elemento
+
+    remove
+    Te permite borrar un elemento
+*/
+
+    function leido() {
+        $('#mensaje').appendTo('#almacen');
+        $('#mensaje').clone().appendTo('#historial');
+    }
+
+    function vaciar() {
+        $('#historial #mensaje').remove();
+    }
+
+</script>	
+</body>
+</html>

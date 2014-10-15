@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	<div id="content">
+        <h3>Lorem.</h3>
+        <h3>Suscipit.</h3>
+        <h3>Voluptatum.</h3>
+        <h3>Illum.</h3>
+        <h3>Minima.</h3>
+        <article>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, deserunt, doloremque illo iste accusamus dolorum in harum necessitatibus odio quis.</div>
+        </article>
+    </div>
+
+<script>
+    $(document).ready(iniciar());
+
+    function iniciar() {
+        $('#content').find('h3').eq(2).html('nuevo texto para el tercer elemento h3');    
+
+        $('#content')
+        .find('article')
+        .find('div')
+        .html('nuevo texto para el div del article');    
+    }
+</script>	
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+    <form action="#"><br>
+	    <input type="color" id="color"><input type="button" value="ver" onclick="cambiarColor()"><br><br>
+    </form>
+    <button onclick="moverTexto('left')">Izquierda</button>
+    <button onclick="moverTexto('center')">Centrado</button>
+    <button onclick="moverTexto('right')">Derecha</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, similique, asperiores ad accusantium laboriosam recusandae perferendis doloremque accusamus tempore quo nemo ab distinctio commodi hic tenetur debitis odio cum quidem.</p>
+    <p><button onclick="agrandarTabla()">Agrandar tabla</button></p>
+	<table id="tablita" width="100" align="left">
+		<tr>
+			<td>Lorem.</td>
+			<td>Veritatis!</td>
+			<td>Incidunt.</td>
+			<td>Veniam.</td>
+		</tr>
+		<tr>
+			<td>Lorem.</td>
+			<td>Repellendus.</td>
+			<td>Nisi.</td>
+			<td>Ab?</td>
+		</tr>
+		<tr>
+			<td>Lorem.</td>
+			<td>Architecto.</td>
+			<td>Aperiam.</td>
+			<td>Quaerat!</td>
+		</tr>
+	</table>
+
+<script>
+
+	/**
+	 * Manipulación de atributos
+	 */
+	//Individuales
+	function cambiarColor() {
+		$('#color').attr('type', 'text');
+	}
+
+	function moverTexto(insAlign) {
+		$('p').attr('align', insAlign);
+	}
+ 	
+	//Multiples
+	function agrandarTabla() {
+		$('#tablita').attr({
+			width : '500px',
+			'border' : '1'
+		});
+	}
+</script>	
+</body>
+</html>

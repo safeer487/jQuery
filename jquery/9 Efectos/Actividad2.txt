@@ -1,0 +1,1 @@
+Crea un slider con efectos de transición.

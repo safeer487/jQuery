@@ -1,0 +1,26 @@
+div#wrapper{
+	width:960px;
+	margin: 0 auto;
+
+}
+
+div#respuesta{
+	width:450px;
+	height:125px;
+	background: blue;
+	padding: 5px;
+	color:white;
+	float: right;
+}
+p#intentos{
+	float:right;
+	margin-right: 20px;
+	font-weight: bold;
+}
+#button{
+	padding:5px;
+	background: blue;
+	color:white;
+	font-weight: bold;
+
+}

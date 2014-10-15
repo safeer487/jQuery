@@ -1,0 +1,9 @@
+Crea dos formularios para vender en la deep web: uno será para uranio y otro para drogas.
+
+Campos del uranio: cantidad (range), comprar(submit)
+Campos de drogas: cantidad (range), comprar (submit).
+Botones extras: Arriba coloca dos botones con los textos: Droga y Uranio.
+
+-Nada más entrar estarán todos los campos desactivados. Si pulsas sobre el botón Droga se activará los campos correspondientes, e igual con Uranio.
+
+-Al lado de cada campo "cantidad" debe existir un botón que diga "manual". El cual convertirá el campo en number.

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Titulo</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="menu"> 
+		<h1>Parte 1</h1>
+		<h2>Cambia de color cuando se pulsa</h2>
+	<ul>
+		<li><a href="#" id="marcador1" onclick="cambiarMarcador(1)">Lorem.</a></li>
+		<li><a href="#" id="marcador2" onclick="cambiarMarcador(2)">Accusamus.</a></li>
+		<li><a href="#" id="marcador3" onclick="cambiarMarcador(3)">Ad.</a></li>
+		<li><a href="#" id="marcador4" onclick="cambiarMarcador(4)">Earum.</a></li>
+		<li><a href="#" id="marcador5" onclick="cambiarMarcador(5)">Accusantium.</a></li>
+	</ul>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1>Parte 2</h1>
+	<h2>Cambia entre verde y rojo alternativamente</h2>
+	<ul>
+		<li><a href="#" id="marcador1b" onclick="cambiarMarcador2(1)">Lorem.</a></li>
+		<li><a href="#" id="marcador2b" onclick="cambiarMarcador2(2)">Accusamus.</a></li>
+		<li><a href="#" id="marcador3b" onclick="cambiarMarcador2(3)">Ad.</a></li>
+		<li><a href="#" id="marcador4b" onclick="cambiarMarcador2(4)">Earum.</a></li>
+		<li><a href="#" id="marcador5b" onclick="cambiarMarcador2(5)">Accusantium.</a></li>
+	</ul>
+	
+	</div>
+	<script>
+		var cambiarMarcador = function(iniMar) {
+			$('#marcador' + iniMar).css('background-color' , 'green');
+		}
+
+		var cambiarMarcador2 = function(iniMar) {
+			var $marcador = $('#marcador' + iniMar + 'b');
+			if($marcador.css('background-color') == 'rgb(255, 0, 0)') {
+				$marcador.css('background-color' , 'green');
+			} else {
+				$marcador.css('background-color' , 'red');
+			}
+			
+		}
+	</script>
+</body>
+</html>
+

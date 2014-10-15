@@ -1,0 +1,1 @@
+Crea dos marcadores: uno que al pulsar pase de rojo a verde y otro que intercambie. (mira el ejemplo)

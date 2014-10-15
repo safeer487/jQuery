@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<style>
+	#ejemploDiv {
+		width: 200px;
+		height: 200px;
+		background-color: #E5AF34;
+		color: white;
+	}
+	</style>
+</head>
+<body>
+
+	<button id="ejemplo">Te capturo</button>
+	<button>Yo no</button>
+	<div id="ejemploDiv">Soy un div, y también soy pulsable</div>
+
+
+<script>
+    
+    /**
+     * Capturar un evento simple
+     */
+    $('#ejemplo').click(function() {
+    	console.log('El botón de ejemplo se ha pulsado');
+    });
+
+    $('#ejemploDiv').click(function() {
+    	console.log('El div ha pulsado');
+    });
+
+    /**
+     * Capturar registro de eventos (orientado para hacer un controlador)
+     */
+    $('button').on('click blur', { algo : 'informacion'} ,function(event) {//sirve para capturar los eventos
+    	console.log(event.type, event.data);
+    });
+    
+//de esta manera no se utilizan los onclick en el html
+</script>	
+</body>
+</html>

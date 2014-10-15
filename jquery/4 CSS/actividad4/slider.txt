@@ -1,0 +1,3 @@
+Crea un slider con JQuery.
+
+Tienes TOTAL LIBERTAD.

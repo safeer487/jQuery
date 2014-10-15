@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<style>
+	</style>
+</head>
+<body>
+
+	<form action="">
+		<input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+	</form>
+
+<script>
+/**
+ * Ejemplo de Hover
+ */
+
+$(document).ready(iniciar());
+
+function iniciar() {
+	var $body = $('body');
+	//Tecla que ha pulsado 
+    $body.keypress(function(e) {
+    	if (e.which == 0) {
+    		$('ventana').css('display','none')
+
+    	};
+		console.log( "Tecla pulsada: " + e.which); //Cuidado que no siempre es la misma de keydown y keyup
+	});
+	//Tecla que está abajo
+    $body.keydown(function(e) {//cunando pincha esa tecla
+		console.log( "Tecla apretada: " + e.which);
+	});
+	//Tecla liberada
+	$body.keyup(function(e) {//cuando suelta esa tecla
+		console.log( "Tecla levantada: " + e.which);
+	});
+	//Pierde el foco
+	$('input').focusout(function() {
+    	console.log('Pierde el foco');
+	})
+
+}
+</script>	
+</body>
+</html>

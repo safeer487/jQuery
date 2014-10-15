@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	<div id="content">
+        <p id="rojo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, impedit, delectus, nesciunt veniam ratione officia amet consequuntur laborum nulla repudiandae asperiores enim molestiae doloremque repellendus ad adipisci sapiente porro vitae!</p>
+        <p id="verde">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, neque deserunt quod labore consequuntur nam porro provident magni natus mollitia. Iusto, saepe officiis doloremque dolor aliquid accusantium eius reiciendis quos.</p>
+    </div>
+
+<script>
+    $(document).ready(iniciar());
+
+    function iniciar() {
+        var sFontCSS = $('#rojo').css('color' , 'red'); 
+
+        var sFontCSS2 = $('#verde').css({
+            'font-size' : '2em',
+            'color' : 'green'
+        }); 
+    }
+</script>	
+</body>
+</html>

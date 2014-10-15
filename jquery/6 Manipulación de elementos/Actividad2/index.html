@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="content">
+        <select name="pokemons" id="pokemons">
+                <option value="butterfree">butterfree</option>
+                <option value="caterpie">caterpie</option>
+                <option value="oddish">oddish</option>
+                <option value="pidgeot">pidgeot</option>
+                <option value="pikachu">pikachu</option>
+                <option value="raichu">raichu</option>
+                <option value="weedle">weedle</option>
+            </select>
+            <button id="anyadir" onclick="anyadirPokemon()">Añadir</button>
+            <div id="seleccion"></div>
+            <select name="quitar" id="quitar">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <button onclick="quitarPokemon()">Quitar</button>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

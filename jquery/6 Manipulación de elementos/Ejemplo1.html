@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	<p id="frase">El veloz murciélago <strong>hindú</strong> comía feliz cardillo y <em>kiwi</em></p>
+
+    <p id="frase2"></p>
+
+    <input type="text" value="no me borres">
+
+<script>
+    $(document).ready(iniciar());
+
+/*
+    html
+    Obtiene o establece el contenido HTML de un elemento.
+
+    text
+    Obtiene o establece el contenido en texto del elemento; en caso se pasarle como argumento código HTML, este es despojado.
+
+    attr
+    Obtiene o establece el valor de un determinado atributo.
+
+    width
+    Obtiene o establece el ancho en pixeles del primer elemento de la selección como un entero.
+
+    height
+    Obtiene o establece el alto en pixeles del primer elemento de la selección como un entero.
+
+    position
+    Obtiene un objeto con información sobre la posición del primer elemento de la selección, relativo al primer elemento padre posicionado. Este método es solo obtenedor.
+
+    val
+    Obtiene o establece el valor (value) en elementos de formularios.
+*/
+
+    function iniciar() {
+        //Leer
+        var fraseText = $('#frase').text();//solo el texto devuelve
+        var fraseHTML = $('#frase').html();//devuelve todo html
+        var valueInput = $('input').val();//devuelve el value
+
+        console.log('Texto: ' + fraseText + '\n');
+        console.log('HTML: ' + fraseHTML + '\n');
+        console.log('Input: ' + valueInput + '\n');
+
+        //Modificar
+        $('#frase').text('La lombriz que intentaba ser bombero.');
+        //$('#frase2').html('El veloz gato <strong>catalan</strong>');
+    }
+
+</script>	
+</body>
+</html>

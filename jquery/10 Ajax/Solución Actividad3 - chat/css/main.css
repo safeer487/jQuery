@@ -1,0 +1,14 @@
+#botonEnviar {
+	width: 165px;
+	height: 40px;
+}
+.form-group {
+	width: 40%;
+}
+.row {
+	margin-top: 20px;
+}
+#cajonMensajes {
+	height: 200px;
+	overflow: auto;
+}

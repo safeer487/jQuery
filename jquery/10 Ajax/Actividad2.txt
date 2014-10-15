@@ -1,0 +1,7 @@
+Un formulario con los campos: e-mail, alias y contraseña.
+
+- Cuando pierda el foco los dos primeros campos, verifica con ajax si ya existen en la base de datos. No podemos permitir duplicados. 
+
+- Avisa al usuario con un texto informativo al lado del campo y añade un estilo de borde rojo sobre el input.
+
+(Ejemplo: https://github.com/)

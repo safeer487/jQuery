@@ -1,0 +1,11 @@
+div#imagenes{
+	width:500px;
+	height: 800px;
+	margin: 0 auto;
+
+}
+img{
+	margin-top: 5px;
+	width: 400px;
+	height: 350px;
+}

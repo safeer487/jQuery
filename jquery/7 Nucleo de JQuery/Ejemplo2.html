@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	
+<script>
+    $(document).ready(iniciar());
+
+    function iniciar() {
+        /**
+         * Comprobación de tipos
+         */
+        var miValores = new Array(1, 2, 3);
+    
+        // Utilizar el operador typeof de JavaScript para comprobar tipos primitivos
+        typeof miValores == 'string'; // falso (false)
+        typeof miValores == 'number'; // falso (false)
+        typeof miValores == 'undefined'; // falso (false)
+        typeof miValores == 'boolean'; // falso (false)
+        
+        // Utilizar el operador de igualdad estricta para comprobar valores nulos (null)
+        miValores === null; // falso (false)
+        
+        // Utilizar los métodos jQuery para comprobar tipos no primitivos
+        jQuery.isFunction(miValores); // falso (false)
+        jQuery.isPlainObject(miValores); // falso (false)
+        jQuery.isArray(miValores); // verdadero (true)
+        jQuery.isNumeric(16); // verdadero (true). No disponible en versiones inferiores a jQuery 1.7
+    }
+</script>	
+</body>
+</html>

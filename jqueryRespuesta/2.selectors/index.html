@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<p id="errors"></p>
+	<form action="" method="post">
+		<input type="text" id="email" name="name" placeholder="email"><br>
+		<input type="password" id="password" name="password" placeholder="password"><br>
+		<input type="button" onclick="comprobar()" value="pulseme">
+	</form>
+	
+
+	<script>
+
+
+	//variables
+	$errors = $('#errors')
+	$email = $('#email');
+	$pass = $('#password');
+
+
+		
+	function comprobar(){
+		$errors.text('');
+		if ($email.val() == '') {
+			$errors.text('Debe rellenar su e-mail');
+		}
+		if ($pass.val() == '') {
+			$errors.text('Debe rellenar su contraseña');
+		}
+	}
+
+
+	</script>
+	
+</body>
+</html>

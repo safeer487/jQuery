@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<p id="parrafo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ratione blanditiis placeat eos magni ut, consequuntur iste sapiente consequatur quo rerum tenetur at pariatur! Iure facere aliquid velit voluptatem corrupti odit explicabo, ipsum corporis culpa tempora, magnam deleniti et tempore perferendis labore officiis inventore. Quas quisquam numquam, ut quidem totam.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nobis, voluptatem. Commodi pariatur nostrum repellat, numquam ratione totam nam a. Nihil magni reiciendis dolorem! Officia laboriosam, illum quod sapiente qui.</p>
+
+	<div id="lienzo"></div>
+
+	<script>
+		$(document).ready(function(){
+			$lienzo = $('#lienzo');
+			$parrafo = $('#parrafo1');
+			$lienzo.text($parrafo.text());
+
+		});
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	
+    <form action="#" method="get" id="formEstandar">
+        <input type="text" value="No lo apretes por fi" readonly>
+
+        <input type="button" onclick="cambiarTexto()" value="cifrar">
+    </form>
+
+<script>
+/**
+ * :button
+Selecciona elementos <button> y con el atributo type='button'
+
+:checkbox
+Selecciona elementos <input> con el atributo type='checkbox'
+
+:checked
+Selecciona elementos <input> del tipo checkbox seleccionados
+
+:disabled
+Selecciona elementos del formulario que están deshabitados
+
+:enabled
+Selecciona elementos del formulario que están habilitados
+
+:file
+Selecciona elementos <input> con el atributo type='file'
+
+:image
+Selecciona elementos <input> con el atributo type='image'
+
+:input
+Selecciona elementos <input>, <textarea> y <select>
+
+:password
+Selecciona elementos <input> con el atributo type='password'
+
+:radio
+Selecciona elementos <input> con el atributo type='radio'
+
+:reset
+Selecciona elementos <input> con el atributo type='reset'
+
+:selected
+Selecciona elementos <options> que están seleccionados
+
+:submit
+Selecciona elementos <input> con el atributo type='submit'
+
+:text
+Selecciona elementos <input> con el atributo type='text'
+ */
+
+    function cambiarTexto() {
+        $('#formEstandar :text').val('$%&$%/!'); //es para poner el value
+    }
+</script>	
+</body>
+</html>

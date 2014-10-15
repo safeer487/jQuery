@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+
+	<div id="tabla">
+		
+	</div>
+	<button id="botonVer">Ver</button>
+	
+
+<script>
+
+$(document).ready(function() {
+
+	$('#botonVer').click(function(event) {
+		$.get('topMarcadores.php', '', function(respuesta) {
+    		$('#tabla').html(respuesta);
+    	});
+	});
+
+});
+</script>	
+</body>
+</html>

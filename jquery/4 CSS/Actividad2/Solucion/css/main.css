@@ -1,0 +1,39 @@
+#content {
+	width: 1000px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+body {
+    overflow:hidden;
+}
+
+#visor {
+	width: 3078px;
+	height: 224px;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	background-image: url('../img/fondo.png');
+	z-index: 1;
+}
+#mario {
+	position: absolute;
+	width: 13px;
+	height: 15px;
+	background-image: url('../img/mario.png');
+	top: 50px;
+	left: 20%;
+	z-index: 2;
+	background-repeat: no-repeat;
+}
+#botonRight {
+	margin-left: 100px;
+}
+#controles {
+	margin-top: 500px;
+}
+button {
+	width: 80px;
+	height: 80px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <style>
+        .big {
+            font-style: italic;
+            background-color: #73DD9D;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+	<div id="content">
+        <h1>Pijama</h1>
+    </div>
+
+<script>
+    $(document).ready(iniciar());
+
+    function iniciar() {
+
+        var $h1 = $('h1');
+    
+        //Añade una clase
+        $h1.addClass('big');
+        //Quitar una clase
+        //$h1.removeClass('big');
+        //Inteligente: si tiene una clase, quita; si no tiene, añade
+        //$h1.toggleClass('big'); 
+        
+        //Identificar si tiene una clase
+        if ($h1.hasClass('big')) {
+            console.log('Tiene la clase');
+        }
+    }
+
+</script>	
+</body>
+</html>
